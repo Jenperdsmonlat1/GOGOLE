@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="Root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1100.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.webbrowser.HelloController">
+   <children>
+      <HBox maxHeight="35.0" minHeight="35.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="labelTitle" text="Web Browser - By Jesuisroot123 - version 0.1" />
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="85.0" spacing="10.0">
+               <children>
+                  <Button fx:id="reduceButton" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#reduce" prefHeight="15.0" prefWidth="15.0" styleClass="reduceButton" />
+                  <Button fx:id="maximizeButton" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#setMax" prefHeight="15.0" prefWidth="15.0" styleClass="maximizeButton" />
+                  <Button fx:id="exitButton" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#exit" prefHeight="15.0" prefWidth="15.0" styleClass="exitButton" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0" spacing="10.0">
+               <children>
+                  <Button fx:id="searchButton" mnemonicParsing="false" styleClass="btn-nav">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ressources/search-regular-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" styleClass="btn-nav">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ressources/refresh-regular-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="inputSearch" maxHeight="35.0" promptText="Votre recherche" styleClass="btnBarNav" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0" spacing="15.0">
+               <children>
+                  <Button fx:id="favoriteButton" mnemonicParsing="false" styleClass="btn-nav">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ressources/heart-regular-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="historyButton" mnemonicParsing="false" styleClass="btn-nav">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ressources/history-regular-24.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-text-fill: #E64134; -fx-font-size: 50px;" text="G" />
+                  <Label style="-fx-text-fill: #FABB05; -fx-font-size: 50px;" text="O" />
+                  <Label style="-fx-text-fill: #34A853; -fx-font-size: 50px;" text="G" />
+                  <Label style="-fx-text-fill: #4285F4; -fx-font-size: 50px;" text="O" />
+                  <Label style="-fx-text-fill: #E94235; -fx-font-size: 50px;" text="L" />
+                  <Label style="-fx-text-fill: #FABB05; -fx-font-size: 50px;" text="E" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <TextField fx:id="inputRecherche" maxWidth="605.0" prefHeight="55.0" prefWidth="605.0" promptText="Votre recherche" styleClass="btnBarNav" />
+                        <Button fx:id="btnRecherche" maxHeight="55.0" maxWidth="55.0" minHeight="55.0" minWidth="55.0" mnemonicParsing="false" onAction="#rechercher" prefHeight="55.0" prefWidth="55.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/search-regular-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnAmazon" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToAmazon" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/amazon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDeepl" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToDeepl" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/deepl.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnGithub" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToGithub" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/github-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnTrivago" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToTrivago" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/trivago.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnYoutube" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToYoutube" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/youtube-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnGactu" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goToGActu" prefHeight="60.0" prefWidth="60.0" styleClass="btnBarNav">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ressources/gactu-removebg-preview.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
