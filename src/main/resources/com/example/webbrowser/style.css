@@ -1,0 +1,69 @@
+.root {
+    -fx-background-color: #232526;
+}
+
+.exitButton {
+    -fx-background-color: rgb(255, 55, 55);
+    -fx-background-radius: 15px;
+}
+
+.reduceButton {
+    -fx-background-color: rgb(84, 255, 117);
+    -fx-background-radius: 15px;
+}
+
+.maximizeButton {
+    -fx-background-color: rgb(255, 152, 55);
+    -fx-background-radius: 15px;
+}
+
+.labelTitle {
+    -fx-text-fill: white;
+    -fx-font-family: Noto Sans;
+    -fx-font-size: 14px;
+}
+
+.btn-nav {
+    -fx-background-color: none;
+}
+
+.btnBarNav {
+    -fx-background-color: #414345;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}
+
+.scrollPane {
+	-fx-background: transparent;
+	-fx-background-color: transparent;
+}
+
+.scrollPane .scroll-bar:horizontal,
+.scrollPane .scroll-bar:vertical {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+    -fx-background-radius: 10px;
+}
+
+.scrollPane .scroll-bar:horizontal .track,
+.scrollPane .scroll-bar:vertical .track {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+}
+
+.scrollPane .scroll-bar .increment-arrow,
+.scrollPane .scroll-bar .decrement-arrow {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+	-fx-text-fill: white;
+}
+
+.scrollPane .scroll-bar .thumb {
+	-fx-border-color: transparent;
+	-fx-background-color: #2e3133;
+}
+
+.scrollPane .corner {
+	-fx-border-color: transparent;
+	-fx-background-color: #232526;
+}
