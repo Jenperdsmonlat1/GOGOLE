@@ -12,6 +12,7 @@ class HelloApplication : Application() {
 
     private var x = 0.0
     private var y = 0.0
+    
     override fun start(stage: Stage) {
         val fxmlLoader: Parent = FXMLLoader.load(HelloApplication::class.java.getResource("hello-view.fxml"))
         val scene = Scene(fxmlLoader)
